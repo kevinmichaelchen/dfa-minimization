@@ -6,6 +6,6 @@ class DFA(
   accepts: Set[State]
 ) {
 
-  println states
+  println(states)
 
 }

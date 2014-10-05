@@ -21,12 +21,14 @@ _,_,_,_,_,01
       println("The first state/row of the matrix is the start state (state 1)")
       println("When multiple symbols lead to the same state, we simply concatenate them (which isn't a problem since symbols are 1 char long anyway).")
       println("Row 1 indicates all the states that State 1 can get to. If a state cannot get to another state, we use an underscore.")
+
+      System.exit(1)
     }
 
-    println("Printing states")
-    for (line <- Source.fromFile(args(0)).getLines)
-      print(line)
-
+    val lines = Source.fromFile(args(0)).getLines.toArray
+    for (i <- 0 until lines.length) {
+      println(lines(i))
+    }
     
   }
 
