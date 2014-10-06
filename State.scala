@@ -1,3 +1,3 @@
 class State(name: Symbol) {
-  override def toString = name.toString
+  override def toString = "State " + name.toString
 }
