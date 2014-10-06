@@ -65,6 +65,11 @@ _,_,_,_,_,01
 
     println("Transitions:")
     transitions.foreach { case ((s0,c), s1) => println(s0 + " sees a " + c + " and goes to " + s1) }
+
+    println("Testing state equality:")
+    val x = new State(Symbol("1"))
+    val y = new State(Symbol("1"))
+    println(x + " == " + y + ": " + (x==y))
     
   }
 
