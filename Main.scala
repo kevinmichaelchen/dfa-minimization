@@ -14,8 +14,8 @@ _,_,_,_,0,1
 _,_,_,_,_,01
   
 - Number of rows indicates number of states.
-- States are 1-indexed.
-- State 1 is the start state.
+- States are 0-indexed.
+- State 0 is the start state.
 - If Row i ends in an asterisk, State i is an accept state.
 - Row i indicates the adjacent states.
   - If Row i, Column j has an UNDERSCORE, there is no arc from State i to State j.
