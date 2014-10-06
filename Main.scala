@@ -38,13 +38,13 @@ _,_,_,_,_,01
     for (i <- 0 until lines.length) {
       
       val line: String = lines(i)
-      val state: State = new State(Symbol(i+""))
+      val state: State = new State(i+"")
       states += state
       if (line endsWith "*") acceptStates += state
 
       val cols: Array[String] = line split ','
       for (j <- 0 until cols.length) {
-	val to: State = new State(Symbol(j+""))
+	val to: State = new State(j+"")
 	val arcs: Array[Char] = cols(j).toCharArray
 
 	for (arc <- arcs; 
@@ -67,8 +67,8 @@ _,_,_,_,_,01
     transitions.foreach { case ((s0,c), s1) => println(s0 + " sees a " + c + " and goes to " + s1) }
 
     println("Testing state equality:")
-    val x = new State(Symbol("1"))
-    val y = new State(Symbol("1"))
+    val x = new State("1")
+    val y = new State("1")
     println(x + " == " + y + ": " + (x==y))
     
   }

@@ -1,6 +1,14 @@
 class State(n: Symbol) {
 
-  val name = n
+  def this(n: String) {
+    this(Symbol(n))
+  }
+
+  def this(n: Char) {
+    this(n.toString)
+  }
+
+  val name: Symbol = n
 
   override def toString = "State " + name.toString
 
